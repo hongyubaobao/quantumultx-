@@ -1,4 +1,4 @@
-hostname=*.zhihu.com,api.zhihu.com, link.zhihu.com,i.weread.qq.com,vira.llsapp.com,p.du.163.com,*.kuwo.cn,mp.weixin.qq.com，api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com, app.bilibili.com,*.amemv.com,api1.dobenge.cn,mp.bybutter.com,api.termius.com,photos.adobe.io,dict.eudic.net,api.jiaonizuocai.com,www.xmind.cn,mob2015.kekenet.com,greasyfork.org, openuserjs.org,api.m.jd.com,trade-acs.m.taobao.com
+hostname=*.zhihu.com,api.zhihu.com, link.zhihu.com,i.weread.qq.com,vira.llsapp.com,p.du.163.com,*.kuwo.cn,mp.weixin.qq.com，api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com, app.bilibili.com,*.amemv.com,api1.dobenge.cn,mp.bybutter.com,api.termius.com,photos.adobe.io,dict.eudic.net,api.jiaonizuocai.com,www.xmind.cn,mob2015.kekenet.com,greasyfork.org, openuserjs.org,api.m.jd.com,trade-acs.m.taobao.com,dida365.com, ticktick.com,account.wps.*
 
 
 ; 英语流利说
@@ -99,3 +99,12 @@ https:\/\/greasyfork\.org\/scripts\/.*\.user\.js url script-response-body https:
 #淘宝历史比价 (by yichahucha)
 ^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+
+# 滴答清单 pro
+^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/QuantumultX/File/DiDaQingDan.js
+
+# 用药助手解锁专业版 (By Primovist)
+^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/yyzs.js
+
+# WPS (By eHpo)
+^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
