@@ -1,7 +1,7 @@
 hostname=*.zhihu.com,api.zhihu.com, link.zhihu.com,i.weread.qq.com,vira.llsapp.com,p.du.163.com,*.kuwo.cn,mp.weixin.qq.com，api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com, app.bilibili.com,*.amemv.com,api1.dobenge.cn,mp.bybutter.com,api.termius.com,photos.adobe.io,dict.eudic.net,api.jiaonizuocai.com,www.xmind.cn,mob2015.kekenet.com,greasyfork.org, openuserjs.org,api.m.jd.com,trade-acs.m.taobao.com
 
 
-; 英语流利说
+英语流利说
 ^https?://vira.llsapp.com/api/v2/readings/limitation url response-body .* response-body .
 ;^https?://vira.llsapp.com/api/v2/readings/limitation url response-body .* response-body {}
 
@@ -16,17 +16,18 @@ hostname=*.zhihu.com,api.zhihu.com, link.zhihu.com,i.weread.qq.com,vira.llsapp.c
   
 ^https://p\.du\.163\.com/gain/readtime/info.json url response-body "tradeEndTime":\d{10} response-body "tradeEndTime":1679685290
 
-; 酷我音乐
-
-
-^https?:\/\/.*\.kuwo\.cn/vip/v2/user/vip url script-response-body http://api.170312.xyz/addid?url=https://raw.githubusercontent.com/yxiaocai/quanx/master/js/kuwovip.js&id=0B9CBB085C99&id=0B9CBB08
-^https?:\/\/musicpay\.kuwo\.cn/ url response-body "vip" response-body "song"
-^https?://vip1\.kuwo\.cn/vip/spi/mservice url script-response-body http://api.170312.xyz/addid?url=https://raw.githubusercontent.com/yxiaocai/quanx/master/js/kuwovip2.js&id=0B9CBB085C99&id=0B9CBB08
-
 
 ; 去微信公众号底部广告(Choler)
 
 ^https?://mp.weixin.qq.com/mp/getappmsgad url script-response-body http://api.170312.xyz/addid?url=https://Choler.github.io/Surge/Script/WeChat.js&id=0B9CBB085C99&id=0B9CBB08
+
+# 酷我音乐SVIP (By yxiaocai)
+^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ url 302 http://musicpay.kuwo.cn/music.pay?uid=1
+
+# 网易蜗牛读书VIP (By yxiaocai and JO2EY)
+^https?://p\.du\.163\.com/readtime/info.json url reject
+^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
 
 # 知乎去广告 (By onewayticket255)
 https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
