@@ -108,3 +108,7 @@ https:\/\/greasyfork\.org\/scripts\/.*\.user\.js url script-response-body https:
 
 # WPS (By eHpo)
 ^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+
+# tiktok封区解锁
+(.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
+(?<=(carrier|account|sys)_region=)CN url 307 JP
