@@ -1,4 +1,4 @@
-hostname=*.zhihu.com,api.zhihu.com, link.zhihu.com,i.weread.qq.com,vira.llsapp.com,p.du.163.com,*.kuwo.cn,mp.weixin.qq.com，api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com, app.bilibili.com,*.amemv.com,api1.dobenge.cn,mp.bybutter.com,api.termius.com,photos.adobe.io,dict.eudic.net,api.jiaonizuocai.com,www.xmind.cn,mob2015.kekenet.com,greasyfork.org, openuserjs.org,api.m.jd.com,trade-acs.m.taobao.com,dida365.com, ticktick.com,account.wps.*
+hostname=*.zhihu.com,api.zhihu.com, link.zhihu.com,i.weread.qq.com,vira.llsapp.com,p.du.163.com,*.kuwo.cn,mp.weixin.qq.com，api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,api.bilibili.com, app.bilibili.com,*.amemv.com, api1.dobenge.cn, mp.bybutter.com,api.termius.com,photos.adobe.io,dict.eudic.net,api.jiaonizuocai.com,www.xmind.cn,mob2015.kekenet.com,greasyfork.org, openuserjs.org,api.m.jd.com,trade-acs.m.taobao.com,dida365.com, ticktick.com,account.wps.*
 
 
 ; 英语流利说
